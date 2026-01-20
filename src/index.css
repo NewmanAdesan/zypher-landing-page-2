@@ -5,7 +5,8 @@
 
 @theme {
   --font-sans: "DM Sans", "Inter", sans-serif;
-  --font-display: "Urbanist", sans-serif;
+  --font-display: "DM Sans", sans-serif;
+  /* User specified DM Sans for headings too */
   --font-mono: "SF Pro", "SF Mono", monospace;
 
   --color-background: hsl(var(--background));
@@ -43,87 +44,65 @@
 
 @layer base {
   :root {
-    /* Light Theme (Auth/Account) */
+    /* Keeping light theme as fallback, but aligning with neutrals */
     --background: 0 0% 93%;
-    /* #EEEEEE */
-    --foreground: 0 0% 20%;
-    /* #323232 */
-
-    --card: 204 33% 99%;
-    /* #FCFEFF */
-    --card-foreground: 0 0% 20%;
-    /* #323232 */
-
+    --foreground: 0 0% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 220 7% 15%;
-    /* Dark gradient fallback/Text Color */
+    --popover-foreground: 0 0% 15%;
+    --primary: 0 0% 15%;
     --primary-foreground: 0 0% 100%;
-
-    --secondary: 0 0% 70%;
-    /* #B1B1B1 */
-    --secondary-foreground: 0 0% 20%;
-
-    --muted: 0 0% 55%;
-    /* #8C8C8C */
-    --muted-foreground: 0 0% 30%;
-
-    --accent: 204 43% 53%;
-    /* #5dade2 (Teal) */
-    --accent-foreground: 0 0% 100%;
-
+    --secondary: 0 0% 90%;
+    --secondary-foreground: 0 0% 15%;
+    --muted: 0 0% 80%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 47 100% 91%;
+    /* Gold-ish */
+    --accent-foreground: 0 0% 15%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 212 30% 89%;
-    /* #DAE1EA */
-    --input: 212 30% 89%;
-    --ring: 204 43% 53%;
-
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 80%;
+    --input: 0 0% 80%;
+    --ring: 0 0% 15%;
     --radius: 0.5rem;
   }
 
   .dark {
-    /* Dark Theme (Main App) */
-    --background: 0 0% 8.2%;
-    /* #151515 */
-    --foreground: 220 33% 98%;
-    /* #F7F9FD */
+    /* Brand Correct Dark Theme */
+    --background: 0 0% 14.5%;
+    /* #252525 */
+    --foreground: 0 0% 100%;
+    /* #FFFFFF */
 
     --card: 0 0% 14.5%;
-    /* #252525 */
-    --card-foreground: 220 33% 98%;
+    /* Same as bg for seamless look per slide */
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 8.2%;
-    --popover-foreground: 220 33% 98%;
+    --popover: 0 0% 14.5%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 216 100% 96%;
-    /* #EBF3FF */
+    --primary: 0 0% 100%;
     --primary-foreground: 0 0% 14.5%;
 
-    --secondary: 222 47% 11%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217 19% 27%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 0 0% 40%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 204 43% 53%;
-    /* #5dade2 */
-    --accent-foreground: 0 0% 100%;
+    --accent: 42 34% 70%;
+    /* Muted Gold derived from linear gradient mid-point roughly */
+    --accent-foreground: 0 0% 15%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 224 44% 28%;
-    /* #283968 */
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 0 0% 9%;
+    /* #171717 */
+    --input: 0 0% 20%;
+    --ring: 47 100% 91%;
   }
-}
-
-:root {
-  font-family: var(--font-sans);
 }
 
 @layer base {
@@ -132,12 +111,13 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground antialiased font-sans;
   }
 }
 
-/* Custom Gradients */
 @layer utilities {
+
+  /* Brand Gradients from User */
   .bg-metallic {
     background: linear-gradient(128.62deg, #FFF5D0 11.02%, #7A766B 93.11%);
   }
@@ -146,14 +126,16 @@
     background: linear-gradient(128.62deg, #FFF5D0 11.02%, #7A766B 93.11%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    /* Fallback */
   }
 
-  .bg-card-gradient {
-    background: linear-gradient(104.01deg, #1F2021 2.88%, #3A3B40 99.58%);
+  .bg-dark-radial {
+    background: radial-gradient(89.54% 67.34% at 33.89% -8.16%, #949494 0%, #181818 63.52%, #1D1D1D 100%);
   }
 
-  .glass {
-    background: rgba(44, 45, 47, 0.9);
-    backdrop-filter: blur(4px);
+  .shadow-brand-inner {
+    box-shadow: inset 41.7199px 24.3366px 48.6732px rgba(43, 46, 61, 0.9), inset -29.0567px 50.8492px 123.491px rgba(255, 255, 255, 0.87);
   }
 }

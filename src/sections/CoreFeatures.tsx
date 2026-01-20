@@ -1,46 +1,73 @@
 import { Section } from "@/components/ui/section";
-import {
-    Wallet, CreditCard, Landmark, Coins,
-    BarChart3, Smartphone, Eye, Globe
-} from "lucide-react";
+import { Reveal } from "@/components/ui/reveal";
+import { motion } from "framer-motion";
 
 const features = [
-    { icon: Wallet, title: "Fully Encrypted Wallet", desc: "Your funds stay secure 24/7" },
-    { icon: CreditCard, title: "Instant Virtual Cards", desc: "Get your card in minutes" },
-    { icon: Landmark, title: "Global USD Accounts", desc: "Spend USD anywhere" },
-    { icon: Coins, title: "Crypto Deposits", desc: "Fund with USDC, USDT" },
-    { icon: BarChart3, title: "High Limits", desc: "No daily/monthly caps" },
-    { icon: Smartphone, title: "Mobile Payments", desc: "Apple & Google Pay" },
-    { icon: Eye, title: "Monitoring", desc: "View spending anytime" },
-    { icon: Globe, title: "Worldwide", desc: "150M+ locations" },
+    { id: "01.", title: "Fully Encrypted Wallet System", desc: "Your funds stay secure 24/7." },
+    { id: "02.", title: "Instant Virtual Card Issuance", desc: "Get your card in minutes – use online or offline." },
+    { id: "03.", title: "Global USD Accounts", desc: "Spend in USD anywhere Visa or Mastercard is accepted." },
+    { id: "04.", title: "Deposit Options", desc: "Fund your wallet using USDC, TETHER." },
+    { id: "05.", title: "High Transaction Limits", desc: "No daily/monthly spending limits. Higher limits available upon request." },
+    { id: "06.", title: "Mobile Payments Enabled", desc: "Works with Apple Pay & Google Pay." },
+    { id: "07.", title: "Transaction Monitoring", desc: "View spending and balances at any time." },
 ];
+
+const container = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1
+        }
+    }
+};
+
+const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 }
+};
 
 export function CoreFeatures() {
     return (
-        <Section>
-            <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Core Features</h2>
-                <p className="text-muted-foreground max-w-2xl mx-auto">
-                    Everything you need for seamless crypto spending.
-                </p>
+        <Section className="py-24">
+            <div className="mb-20">
+                <div className="flex justify-between items-end mb-12">
+                    <div>
+                        <Reveal width="100%">
+                            <h2 className="text-5xl md:text-7xl font-black mb-6 tracking-tight">Core Features</h2>
+                        </Reveal>
+                    </div>
+                    <div className="hidden md:block text-right">
+                        <span className="text-metallic text-lg tracking-[0.2em] font-light">03</span>
+                    </div>
+                </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <motion.div
+                variants={container}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, margin: "-50px" }}
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16"
+            >
                 {features.map((feature, index) => (
-                    <div
+                    <motion.div
                         key={index}
-                        className="p-6 rounded-xl bg-card border border-border/50 hover:bg-muted/50 transition-colors"
+                        variants={item}
+                        className="flex flex-col gap-4 group"
                     >
-                        <div className="flex items-center gap-3 mb-3">
-                            <feature.icon className="w-5 h-5 text-accent" />
-                            <h3 className="font-semibold">{feature.title}</h3>
+                        <div className="text-metallic text-5xl font-bold tracking-tight">
+                            {feature.id}
                         </div>
-                        <p className="text-sm text-muted-foreground">
+
+                        <h3 className="text-2xl font-semibold mt-2 text-foreground group-hover:text-foreground dark:group-hover:text-[#FFF5D0] transition-colors">{feature.title}</h3>
+
+                        <p className="text-lg text-muted-foreground leading-relaxed font-light">
                             {feature.desc}
                         </p>
-                    </div>
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </Section>
     );
 }

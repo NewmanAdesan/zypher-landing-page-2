@@ -1,73 +1,55 @@
 import { Section } from "@/components/ui/section";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { Reveal } from "@/components/ui/reveal";
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const faqs = [
     {
-        q: "Is KYC required to use ZYPHER.CARDS?",
-        a: "No. We operate using an offshore banking infrastructure that allows us to issue cards without requiring Identity Verification (KYC). Your privacy is our priority.",
+        question: "Is KYC required to use ZYPHER.CARDS?",
+        answer: "No. We do not require any ID verification or documents."
     },
     {
-        q: "Where can I use my card?",
-        a: "You can use your Zypher card anywhere Visa and Mastercard are accepted, online and in-store globally (150M+ merchants).",
+        question: "Where can I use my card?",
+        answer: "Anywhere Visa or Mastercard is accepted — over 150 million merchants and ATMs worldwide."
     },
     {
-        q: "What cryptocurrencies can I deposit?",
-        a: "We accept all major stablecoins (USDC, USDT, DAI) and privacy-focused coins like Monero (XMR) for funding your card balance.",
+        question: "What cryptocurrencies can I deposit?",
+        answer: "We support USDC and TETHER."
     },
     {
-        q: "Are there spending limits?",
-        a: "We offer high daily spending limits up to $150,000 depending on your card tier. No monthly caps on transaction volume.",
-    },
-    {
-        q: "How long does card issuance take?",
-        a: "Virtual cards are issued instantly upon deposit confirmation. You can start spending immediately.",
-    },
+        question: "Are there spending limits?",
+        answer: "There are no daily or monthly spending limits. High-limit cards are available upon request."
+    }
 ];
 
 export function FAQ() {
-    const [openIndex, setOpenIndex] = useState<number | null>(0);
-
     return (
-        <Section className="bg-secondary/20">
-            <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+        <Section className="py-24 max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+                <Reveal width="100%">
+                    <h2 className="text-4xl md:text-5xl font-black mb-6">FAQ</h2>
+                </Reveal>
             </div>
 
-            <div className="max-w-3xl mx-auto space-y-4">
-                {faqs.map((faq, index) => (
-                    <div
-                        key={index}
-                        className="border border-border rounded-lg bg-card overflow-hidden"
-                    >
-                        <button
-                            onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                            className="w-full flex items-center justify-between p-6 text-left hover:bg-muted/50 transition-colors"
-                        >
-                            <span className="font-semibold text-lg">{faq.q}</span>
-                            {openIndex === index ? (
-                                <ChevronUp className="w-5 h-5 text-accent" />
-                            ) : (
-                                <ChevronDown className="w-5 h-5 text-muted-foreground" />
-                            )}
-                        </button>
-                        <AnimatePresence>
-                            {openIndex === index && (
-                                <motion.div
-                                    initial={{ height: 0, opacity: 0 }}
-                                    animate={{ height: "auto", opacity: 1 }}
-                                    exit={{ height: 0, opacity: 0 }}
-                                    transition={{ duration: 0.3 }}
-                                >
-                                    <div className="p-6 pt-0 text-muted-foreground leading-relaxed">
-                                        {faq.a}
-                                    </div>
-                                </motion.div>
-                            )}
-                        </AnimatePresence>
-                    </div>
-                ))}
+            <div className="mx-auto">
+                <Accordion type="single" collapsible className="w-full space-y-4">
+                    {faqs.map((faq, i) => (
+                        <Reveal key={i} delay={i * 0.1} width="100%">
+                            <AccordionItem value={`item-${i}`} className="border border-border bg-card rounded-lg px-6 transition-colors hover:border-accent/30">
+                                <AccordionTrigger className="text-lg font-bold text-foreground dark:hover:text-[#FFF5D0] text-left">
+                                    {faq.question}
+                                </AccordionTrigger>
+                                <AccordionContent className="text-muted-foreground text-lg leading-relaxed pb-6">
+                                    {faq.answer}
+                                </AccordionContent>
+                            </AccordionItem>
+                        </Reveal>
+                    ))}
+                </Accordion>
             </div>
         </Section>
     );

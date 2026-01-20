@@ -1,49 +1,56 @@
 import { Section } from "@/components/ui/section";
-import { ShieldCheck, Globe2, Lock } from "lucide-react";
+import Squares from "@/components/ui/squares";
+import { Reveal } from "@/components/ui/reveal";
 
-const features = [
-    {
-        title: "No KYC. No Limits.",
-        description: "Use crypto like cash – without identity checks or background verification.",
-        icon: ShieldCheck,
-    },
-    {
-        title: "Global Access",
-        description: "Available in 160+ countries, accepted at 150M+ merchants and ATMs worldwide.",
-        icon: Globe2,
-    },
-    {
-        title: "Privacy-First",
-        description: "Total privacy, encrypted transactions, absolute control over your crypto.",
-        icon: Lock,
-    },
-];
 
 export function WhyZypher() {
     return (
-        <Section className="bg-secondary/30">
-            <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Why ZYPHER.CARDS?</h2>
-                <p className="text-muted-foreground max-w-2xl mx-auto">
-                    We've reinvented the crypto card experience to prioritize what matters most: your privacy and freedom.
-                </p>
-            </div>
+        <Section className="relative overflow-hidden py-32">
+            <Squares
+                speed={0.15}
+                squareSize={40}
+                direction="diagonal"
+                borderColor="#333"
+                hoverFillColor="#222"
+            />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
-                {features.map((feature, index) => (
-                    <div
-                        key={index}
-                        className="group relative p-8 rounded-2xl bg-card border border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:shadow-accent/5"
-                    >
-                        <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-6 text-accent group-hover:scale-110 transition-transform">
-                            <feature.icon className="w-6 h-6" />
-                        </div>
-                        <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                        <p className="text-muted-foreground leading-relaxed">
-                            {feature.description}
-                        </p>
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div className="flex justify-between items-center mb-16 border-t border-white/10 pt-8">
+                        <span className="text-sm font-light tracking-wider text-white/50">ZYPHER</span>
+                        <span className="text-metallic text-sm font-bold tracking-[0.2em]">02</span>
                     </div>
-                ))}
+
+                    <Reveal width="100%">
+                        <h2 className="text-6xl md:text-7xl font-black mb-8 leading-[0.9]">
+                            Why <br /> ZYPHER?
+                        </h2>
+                    </Reveal>
+                </div>
+
+                <div className="flex flex-col justify-center space-y-12">
+                    <Reveal delay={0.2} width="100%">
+                        <div className="space-y-4">
+                            <h3 className="text-3xl font-bold text-foreground flex items-center gap-3">
+                                <span className="text-metallic">01.</span> No KYC. No Limits. No Surveillance.
+                            </h3>
+                            <p className="text-xl text-muted-foreground font-light pl-12 border-l border-border">
+                                Use crypto like cash – without identity checks or background verification.
+                            </p>
+                        </div>
+                    </Reveal>
+
+                    <Reveal delay={0.4} width="100%">
+                        <div className="space-y-4">
+                            <h3 className="text-3xl font-bold text-foreground flex items-center gap-3">
+                                <span className="text-metallic">02.</span> Global Access. No Nationality Restrictions.
+                            </h3>
+                            <p className="text-xl text-muted-foreground font-light pl-12 border-l border-border">
+                                Available in 160+ countries, accepted at 150M+ merchants and ATMs worldwide.
+                            </p>
+                        </div>
+                    </Reveal>
+                </div>
             </div>
         </Section>
     );

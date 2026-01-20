@@ -1,40 +1,53 @@
+
 import { Section } from "@/components/ui/section";
 import { Check } from "lucide-react";
+import { Reveal } from "@/components/ui/reveal";
 
 export function Privacy() {
     return (
-        <Section className="bg-gradient-to-b from-background to-secondary/20">
-            <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-8">
-                <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-500/10 text-green-500 text-xs font-medium uppercase tracking-wider">
-                    Offshore Infrastructure
-                </div>
+        <Section className="py-32 relative overflow-hidden">
 
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-display leading-tight">
-                    "Finally, a card that <br />
-                    <span className="text-accent underline decoration-accent/30 underline-offset-8">respects your privacy.</span>"
+            {/* Radial gradient background distinct for this section - adjusted for light/dark */}
+            <div className="absolute inset-0 bg-dark-radial opacity-30 pointer-events-none dark:opacity-30 opacity-10" />
+
+            <div className="relative z-10 flex flex-col items-center text-center max-w-5xl mx-auto space-y-12">
+                <Reveal width="100%" className="flex justify-center">
+                    <div className="inline-flex items-center px-4 py-2 rounded-full border border-border bg-card/5 backdrop-blur-sm">
+                        <span className="text-foreground dark:text-[#FFF5D0] text-xs font-bold uppercase tracking-[0.2em] animate-pulse">Built for Privacy-First Users</span>
+                    </div>
+                </Reveal>
+
+                <h2 className="text-5xl md:text-7xl font-black leading-tight">
+                    <Reveal width="100%">
+                        <span className="block text-foreground pb-4">"Finally, a card that</span>
+                    </Reveal>
+                    <Reveal delay={0.2} width="100%">
+                        <span className="text-metallic block">respects your privacy."</span>
+                    </Reveal>
                 </h2>
 
-                <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-                    ZYPHER.CARDS empowers free financial access with total privacy.
-                    Our offshore-based infrastructure guarantees zero KYC, encrypted transactions,
-                    and absolute control over your crypto.
-                </p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full pt-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 w-full pt-12">
                     {[
                         "No ID checks",
                         "No data harvesting",
-                        "No surveillance",
-                        "Used globally"
+                        "No government surveillance",
+                        "Used by professionals worldwide"
                     ].map((item, i) => (
-                        <div key={i} className="flex items-center justify-center gap-2 p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-border/50">
-                            <div className="bg-green-500 rounded-full p-1">
-                                <Check className="w-3 h-3 text-white" />
+                        <Reveal key={i} delay={0.4 + (i * 0.1)} width="100%" className="h-full">
+                            <div className="flex flex-col items-center justify-center gap-4 p-6 rounded-2xl bg-card border border-border hover:border-accent/30 transition-all group h-full shadow-lg dark:shadow-none">
+                                <Check className="w-8 h-8 text-foreground dark:text-[#FFF5D0] opacity-50 group-hover:opacity-100 transition-opacity" />
+                                <span className="font-bold text-lg text-foreground group-hover:text-foreground dark:group-hover:text-[#FFF5D0] transition-colors">{item}</span>
                             </div>
-                            <span className="font-medium">{item}</span>
-                        </div>
+                        </Reveal>
                     ))}
                 </div>
+
+                <Reveal delay={0.8}>
+                    <p className="text-2xl text-muted-foreground max-w-4xl leading-relaxed mx-auto font-light pt-8">
+                        ZYPHER.CARDS empowers free financial access with total privacy.
+                        Our offshore-based infrastructure guarantees <span className="text-foreground font-medium">zero KYC, encrypted transactions, and absolute control over your crypto.</span>
+                    </p>
+                </Reveal>
             </div>
         </Section>
     );

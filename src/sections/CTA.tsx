@@ -1,30 +1,37 @@
-import { Button } from "@/components/ui/button";
 import { Section } from "@/components/ui/section";
-import { ArrowRight } from "lucide-react";
+import { Reveal } from "@/components/ui/reveal";
+import { motion } from "framer-motion";
 
 export function CTA() {
     return (
-        <Section className="py-32">
-            <div className="absolute inset-0 bg-accent/5" />
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+        <Section className="py-32 relative overflow-hidden">
+            {/* Background noise */}
+            <div className="absolute inset-0 bg-background z-0" />
 
-            <div className="relative text-center max-w-4xl mx-auto space-y-8 p-8 md:p-12 rounded-3xl bg-background/50 backdrop-blur-sm border border-border/50 shadow-2xl">
-                <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-                    Ready to Take Control?
-                </h2>
-                <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                    Join thousands of users worldwide using ZYPHER.CARDS to protect their privacy and spend crypto freely.
-                </p>
+            <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
+                <Reveal width="100%">
+                    <h2 className="text-5xl md:text-7xl font-black text-foreground leading-tight">
+                        Ready to Take Control?
+                    </h2>
+                </Reveal>
 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                    <Button size="lg" className="w-full sm:w-auto h-14 px-8 text-lg bg-accent hover:bg-accent/90 text-white shadow-xl shadow-accent/20">
-                        Start Now – No KYC
-                        <ArrowRight className="ml-2 w-5 h-5" />
-                    </Button>
-                    <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 text-lg border-accent/20 text-foreground hover:bg-accent/5">
-                        View Documentation
-                    </Button>
-                </div>
+                <Reveal delay={0.2} width="100%">
+                    <p className="text-xl md:text-2xl text-muted-foreground font-light mx-auto max-w-2xl">
+                        Join thousands of users worldwide using ZYPHER.CARDS to protect their privacy and spend crypto freely.
+                    </p>
+                </Reveal>
+
+                <Reveal delay={0.4}>
+                    <div className="pt-8 mx-auto">
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="h-20 px-12 text-xl font-bold bg-metallic text-[#1a1a1a] rounded-full shadow-[0_0_40px_-5px_rgba(255,245,208,0.3)]"
+                        >
+                            Start Now – No KYC, No Barriers Get Your Card
+                        </motion.button>
+                    </div>
+                </Reveal>
             </div>
         </Section>
     );
