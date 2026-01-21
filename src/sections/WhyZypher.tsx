@@ -5,6 +5,9 @@ import { Reveal } from "@/components/ui/reveal";
 export function WhyZypher() {
     return (
         <Section className="relative overflow-hidden py-18">
+            {/* Background Decor */}
+            <div className="absolute right-0 top-0 w-1/3 h-full bg-linear-to-l from-accent/5 to-transparent -z-10" />
+            <div className="absolute -left-20 bottom-0 w-[500px] h-[500px] bg-foreground/5 rounded-full blur-[100px] -z-10 pointer-events-none" />
 
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <Reveal width="100%">

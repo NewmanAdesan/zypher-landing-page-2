@@ -25,6 +25,10 @@ function CountUp({ to, suffix = "", duration = 2 }: { to: number; suffix?: strin
 export function Hero() {
     return (
         <Section className="pt-32 md:pt-48 pb-20 overflow-visible relative z-20">
+            {/* Ambient Background Glows */}
+            <div className="absolute top-20 right-0 md:right-20 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-accent/20 rounded-full blur-[120px] -z-10 pointer-events-none opacity-40 animate-pulse" />
+            <div className="absolute bottom-20 left-0 w-[400px] h-[400px] bg-[#7A766B]/10 rounded-full blur-[100px] -z-10 pointer-events-none opacity-30" />
+
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-[1fr_480px] gap-12 items-center justify-between">
 
@@ -130,8 +134,8 @@ export function Hero() {
                 </div>
 
                 {/* Bottom: Stats */}
-                <Reveal delay={0.8} width="100%">
-                    <div className="pt-20 flex flex-wrap justify-center gap-8 md:gap-16 opacity-80 border-t border-border/40 mt-10">
+                <Reveal delay={0.8} width="100%" className="">
+                    <div className="py-10 pb-20 flex flex-wrap justify-center gap-8 md:gap-16 opacity-80 border-t border-border/40 mt-4">
                         <div className="flex items-center gap-3">
                             <Globe className="w-10 h-10 text-foreground dark:text-[#FFF5D0]" />
                             <div className="text-left">
