@@ -5,11 +5,11 @@ import { Check } from "lucide-react";
 
 export function CardOptions() {
     return (
-        <Section className="overflow-hidden py-20 pb-2 md:pb-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <Section className="overflow-hidden py-14 pb-2 md:pb-4 md:pt-2">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
 
                 {/* Content */}
-                <div className="lg:order-1 space-y-10">
+                <div className="lg:order-1 space-y-4">
                     <div>
                         {/* <Reveal width="100%"> */}
                         <span className="text-metallic text-sm font-bold tracking-[0.2em] mb-4 block">AVAILABLE TIERS</span>

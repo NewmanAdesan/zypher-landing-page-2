@@ -38,7 +38,7 @@ export function WhyZypher() {
                         <h3 className="text-2xl md:text-3xl font-bold text-foreground flex items-center gap-2 md:gap-3">
                             <span className="text-xl md:text-2xl text-metallic">01.</span> No KYC. No Limits. No Surveillance.
                         </h3>
-                        <p className="text-xl md:text-2xl text-muted-foreground font-light pl-7.5 border-l border-border">
+                        <p className="text-lg md:text-xl text-muted-foreground font-light pl-5.5 md:pl-8 border-l border-border ml-3">
                             Use crypto like cash – without identity checks or background verification.
                         </p>
                     </div>
@@ -49,7 +49,7 @@ export function WhyZypher() {
                         <h3 className="text-2xl md:text-3xl font-bold text-foreground flex items-center gap-2 md:gap-3">
                             <span className="text-xl md:text-2xl text-metallic">02.</span> Global Access. No Nationality Restrictions.
                         </h3>
-                        <p className="text-xl md:text-2xl text-muted-foreground font-light pl-7.5 border-l border-border ml-3">
+                        <p className="text-lg md:text-xl text-muted-foreground font-light pl-5.5 md:pl-8 border-l border-border ml-3">
                             Available in 160+ countries, accepted at 150M+ merchants and ATMs worldwide.
                         </p>
                     </div>

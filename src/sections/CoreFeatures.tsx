@@ -32,11 +32,11 @@ export function CoreFeatures() {
         <Section className="pt-8 pb-2 md:pt-18 md:pb-4 relative overflow-hidden">
             {/* Subtle Grid Background */}
             {/* <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] -z-10 [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" /> */}
-            <div className="-mt-14 mb-10 md:mb-10">
+            <div className="-mt-14 mb-10 md:mb-0 md:-mt-24">
                 <div className="flex justify-between items-end mb-16">
                     <div>
                         <Reveal width="100%">
-                            <h2 className="text-5xl md:text-7xl font-black mb-6 tracking-tight">Core Features</h2>
+                            <h2 className="text-5xl md:text-7xl font-black mb-8 tracking-tight">Core Features</h2>
                         </Reveal>
                     </div>
                 </div>
