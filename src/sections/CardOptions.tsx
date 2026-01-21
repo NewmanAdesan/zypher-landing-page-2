@@ -5,7 +5,7 @@ import { Check } from "lucide-react";
 
 export function CardOptions() {
     return (
-        <Section className="overflow-hidden py-20 pb-[120px]">
+        <Section className="overflow-hidden py-20 pb-2 md:pb-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
                 {/* Content */}

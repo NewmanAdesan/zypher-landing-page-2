@@ -35,15 +35,15 @@ export function Hero() {
                     {/* Left Column: Text Content */}
                     <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-8">
                         <div>
-                            <h3 className="text-metallic-dark text-sm md:text-base font-bold tracking-[0.2em] uppercase">
+                            <h3 className="text-metallic text-sm md:text-base font-bold tracking-[0.2em] uppercase">
                                 Welcome to ZYPHER Crypto Cards
                             </h3>
-                            <Reveal delay={0.2} width="100%" className="-mt-10">
+                            <Reveal delay={0.2} width="100%" className="-mt-14 md:-mt-10">
                                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-foreground leading-[1.05]">
                                     Banking Without <br />
                                     <span className="text-muted-foreground">the Bank.</span>
                                 </h1>
-                                <p className="text-2xl md:text-3xl font-bold text-metallic-dark mt-6">
+                                <p className="text-2xl md:text-3xl font-bold text-metallic mt-2 md:mt-6">
                                     Your Crypto. Your Card. Your Privacy.
                                 </p>
                             </Reveal>
@@ -56,7 +56,7 @@ export function Hero() {
                             </Reveal>
 
                             <Reveal delay={0.6} className="mx-auto">
-                                <div className="flex flex-col sm:flex-row gap-5 pt-8 justify-center lg:justify-start">
+                                <div className="flex flex-col sm:flex-row gap-5 pt-3 md:pt-8 justify-center lg:justify-start">
                                     <motion.button
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
@@ -84,7 +84,7 @@ export function Hero() {
 
                 {/* Bottom: Stats */}
                 <Reveal delay={0.8} width="100%" className="">
-                    <div className="py-10 pb-20 flex flex-wrap justify-center gap-8 md:gap-16 opacity-80 border-t border-border/40 -mt-32 lg:mt-4">
+                    <div className="py-10 pb-5 md:pb-8 flex flex-wrap justify-center gap-8 md:gap-16 opacity-80 border-t border-border/40 -mt-22 md:-mt-32 lg:mt-4">
                         <div className="flex items-center gap-3">
                             <Globe className="w-10 h-10 text-foreground dark:text-[#FFF5D0]" />
                             <div className="text-left">

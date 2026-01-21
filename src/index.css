@@ -66,6 +66,8 @@
     --input: 0 0% 80%;
     --ring: 0 0% 15%;
     --radius: 0.5rem;
+
+    --gold-gradient: linear-gradient(128.62deg, #C4B07B 11.02%, #5C584E 93.11%);
   }
 
   .dark {
@@ -102,6 +104,8 @@
     /* #171717 */
     --input: 0 0% 20%;
     --ring: 47 100% 91%;
+
+    --gold-gradient: linear-gradient(128.62deg, #FFF5D0 11.02%, #7A766B 93.11%);
   }
 }
 
@@ -123,7 +127,7 @@
   }
 
   .text-metallic {
-    background: linear-gradient(128.62deg, #FFF5D0 11.02%, #7A766B 93.11%);
+    background: var(--gold-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

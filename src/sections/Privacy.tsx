@@ -5,7 +5,7 @@ import { Check } from "lucide-react";
 
 export function Privacy() {
     return (
-        <Section className="py-18 relative overflow-hidden">
+        <Section className="py-8 md:py-12 relative overflow-hidden">
 
             {/* Radial gradient background distinct for this section - adjusted for light/dark */}
             <div className="absolute inset-0 bg-dark-radial pointer-events-none dark:opacity-30 opacity-10 pb-5" />
@@ -17,7 +17,7 @@ export function Privacy() {
                 </div>
                 {/* </Reveal> */}
 
-                <h2 className="text-5xl md:text-7xl font-black leading-tight">
+                <h2 className="text-5xl md:text-7xl font-black leading-tighter">
                     {/* <Reveal width="100%"> */}
                     <span className="block text-foreground">"Finally, a card that</span>
                     {/* </Reveal> */}
@@ -26,7 +26,7 @@ export function Privacy() {
                     {/* </Reveal> */}
                 </h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full -mt-4">
                     {[
                         "No ID checks",
                         "No data harvesting",
@@ -43,7 +43,7 @@ export function Privacy() {
                 </div>
 
                 {/* <Reveal delay={0.8}> */}
-                <p className="mb-8 text-2xl text-muted-foreground max-w-4xl leading-relaxed mx-auto font-light">
+                <p className="mb-8 text-2xl text-muted-foreground max-w-4xl leading-relaxed mx-auto font-light -mt-6">
                     ZYPHER empowers free financial access with total privacy.
                     Our offshore-based infrastructure guarantees <span className="text-foreground font-medium">zero KYC, encrypted transactions, and absolute control over your crypto.</span>
                 </p>
