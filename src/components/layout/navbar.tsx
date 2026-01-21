@@ -9,6 +9,7 @@ const navLinks = [
     { name: "How it Works", href: "#how-it-works" },
     { name: "Card Options", href: "#card-options" },
     { name: "FAQ", href: "#faq" },
+    { name: "Contact Us", href: "#contact" },
 ];
 
 export function Navbar() {

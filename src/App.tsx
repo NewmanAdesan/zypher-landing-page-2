@@ -8,6 +8,7 @@ import { HowItWorks } from "./sections/HowItWorks";
 import { CardOptions } from "./sections/CardOptions";
 import { FAQ } from "./sections/FAQ";
 import { CTA } from "./sections/CTA";
+import { ContactUs } from "./sections/ContactUs";
 
 function App() {
   return (
@@ -44,6 +45,10 @@ function App() {
 
         <section id="cta">
           <CTA />
+        </section>
+
+        <section id="contact">
+          <ContactUs />
         </section>
       </main>
       <Footer />
