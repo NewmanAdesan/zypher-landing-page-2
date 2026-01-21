@@ -31,7 +31,7 @@ export function CoreFeatures() {
     return (
         <Section className="py-24 relative overflow-hidden">
             {/* Subtle Grid Background */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] -z-10 [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+            {/* <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] -z-10 [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" /> */}
             <div className="mb-20">
                 <div className="flex justify-between items-end mb-12">
                     <div>
@@ -53,15 +53,15 @@ export function CoreFeatures() {
                     <motion.div
                         key={index}
                         variants={item}
-                        className="flex flex-col gap-4 group"
+                        className="flex flex-col gap-2 group"
                     >
-                        <div className="text-metallic text-5xl font-bold tracking-tight">
+                        <div className="text-metallic text-3xl font-bold tracking-tight">
                             {feature.id}
                         </div>
 
-                        <h3 className="text-2xl font-semibold mt-2 text-foreground group-hover:text-foreground dark:group-hover:text-[#FFF5D0] transition-colors">{feature.title}</h3>
+                        <h3 className="text-xl font-semibold mt-2 text-foreground group-hover:text-foreground dark:group-hover:text-[#FFF5D0] transition-colors">{feature.title}</h3>
 
-                        <p className="text-lg text-muted-foreground leading-relaxed font-light">
+                        <p className="text-base text-muted-foreground leading-relaxed font-light">
                             {feature.desc}
                         </p>
                     </motion.div>
