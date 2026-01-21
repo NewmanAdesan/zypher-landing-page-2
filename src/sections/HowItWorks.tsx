@@ -23,7 +23,7 @@ export function HowItWorks() {
                 {/* Connecting Line (Desktop) */}
                 <div className="hidden md:block absolute top-10 left-0 w-full h-0.5 bg-linear-to-r from-transparent via-accent/30 to-transparent z-0" />
 
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10 mt-32">
                     {steps.map((step, index) => (
                         <motion.div
                             key={index}

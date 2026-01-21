@@ -19,14 +19,14 @@ export function Privacy() {
 
                 <h2 className="text-5xl md:text-7xl font-black leading-tight">
                     {/* <Reveal width="100%"> */}
-                    <span className="block text-foreground pb-4">"Finally, a card that</span>
+                    <span className="block text-foreground">"Finally, a card that</span>
                     {/* </Reveal> */}
                     {/* <Reveal delay={0.2} width="100%"> */}
                     <span className="text-metallic block">respects your privacy."</span>
                     {/* </Reveal> */}
                 </h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full pt-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
                     {[
                         "No ID checks",
                         "No data harvesting",
@@ -43,7 +43,7 @@ export function Privacy() {
                 </div>
 
                 {/* <Reveal delay={0.8}> */}
-                <p className="mb-8 text-2xl text-muted-foreground max-w-4xl leading-relaxed mx-auto font-light pt-12">
+                <p className="mb-8 text-2xl text-muted-foreground max-w-4xl leading-relaxed mx-auto font-light">
                     ZYPHER empowers free financial access with total privacy.
                     Our offshore-based infrastructure guarantees <span className="text-foreground font-medium">zero KYC, encrypted transactions, and absolute control over your crypto.</span>
                 </p>
