@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function CTA() {
     return (
-        <Section className="py-32 relative overflow-hidden">
+        <Section className="py-32 pt-0 relative overflow-hidden">
             {/* Background noise */}
             <div className="absolute inset-0 bg-background z-0" />
 
@@ -21,7 +21,7 @@ export function CTA() {
                     </p>
                 </Reveal>
 
-                <Reveal delay={0.4}>
+                <Reveal delay={0.4} className="mx-auto -mt-8">
                     <div className="pt-8 mx-auto">
                         <motion.button
                             whileHover={{ scale: 1.05 }}

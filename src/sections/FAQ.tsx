@@ -42,7 +42,7 @@ const itemVariants: Variants = {
 
 export function FAQ() {
     return (
-        <Section className="py-18 max-w-4xl mx-auto">
+        <Section className="py-18 pt-0 max-w-4xl mx-auto">
             <div className="text-center mb-28">
                 <Reveal width="100%">
                     <h2 className="text-4xl md:text-5xl font-black mb-6">FAQ</h2>

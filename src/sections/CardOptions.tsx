@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/reveal";
 
 export function CardOptions() {
     return (
-        <Section className="overflow-hidden py-18">
+        <Section className="overflow-hidden py-18 pb-[120px]">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
                 {/* Content */}
