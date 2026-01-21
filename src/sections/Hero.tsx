@@ -1,6 +1,6 @@
 
 import { Section } from "@/components/ui/section";
-import { Globe, CreditCard, Eye } from "lucide-react";
+import { Globe, CreditCard } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
 import { motion, useSpring, useTransform, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
