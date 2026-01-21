@@ -73,7 +73,7 @@ export function Hero() {
                     <Reveal delay={0.6} width="100%" className="">
                         <div className="relative order-1 lg:order-2 flex justify-center">
                             <img
-                                src="/hero-image.svg"
+                                src="/hero-image-3.svg"
                                 alt="Zypher App Interface"
                                 className="w-full max-w-[550px] h-auto object-contain drop-shadow-2xl hover:scale-[1.02] transition-transform duration-700"
                                 loading="eager"

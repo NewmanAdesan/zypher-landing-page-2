@@ -1,7 +1,7 @@
 import { Section } from "@/components/ui/section";
 import { Check, Eye } from "lucide-react";
 
-import { Reveal } from "@/components/ui/reveal";
+// import { Reveal } from "@/components/ui/reveal";
 
 export function CardOptions() {
     return (
@@ -11,30 +11,30 @@ export function CardOptions() {
                 {/* Content */}
                 <div className="order-2 lg:order-1 space-y-10">
                     <div>
-                        <Reveal width="100%">
-                            <span className="text-metallic text-sm font-bold tracking-[0.2em] mb-4 block">AVAILABLE TIERS</span>
-                            <h2 className="text-5xl md:text-6xl font-black mb-6">Card Options</h2>
-                        </Reveal>
+                        {/* <Reveal width="100%"> */}
+                        <span className="text-metallic text-sm font-bold tracking-[0.2em] mb-4 block">AVAILABLE TIERS</span>
+                        <h2 className="text-5xl md:text-6xl font-black mb-6">Card Options</h2>
+                        {/* </Reveal> */}
                     </div>
 
                     <div className="space-y-6">
-                        <Reveal delay={0.2} width="100%">
-                            <div className="p-6 rounded-2xl bg-card border border-border shadow-xl">
-                                <h3 className="text-2xl font-bold text-foreground mb-2">3D Secure Card</h3>
-                                <p className="text-muted-foreground mb-6">The standard for secure online transactions.</p>
+                        {/* <Reveal delay={0.2} width="100%"> */}
+                        <div className="p-6 rounded-2xl bg-card border border-border shadow-xl">
+                            <h3 className="text-2xl font-bold text-foreground mb-2">3D Secure Card</h3>
+                            <p className="text-muted-foreground mb-6">The standard for secure online transactions.</p>
 
-                                <ul className="space-y-4">
-                                    <li className="flex items-center gap-3">
-                                        <Check className="w-5 h-5 text-foreground dark:text-[#FFF5D0]" />
-                                        <span className="text-foreground">Valid for up to 2 years</span>
-                                    </li>
-                                    <li className="flex items-center gap-3">
-                                        <Check className="w-5 h-5 text-foreground dark:text-[#FFF5D0]" />
-                                        <span className="text-foreground">Reloadable anytime</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </Reveal>
+                            <ul className="space-y-4">
+                                <li className="flex items-center gap-3">
+                                    <Check className="w-5 h-5 text-foreground dark:text-[#FFF5D0]" />
+                                    <span className="text-foreground">Valid for up to 2 years</span>
+                                </li>
+                                <li className="flex items-center gap-3">
+                                    <Check className="w-5 h-5 text-foreground dark:text-[#FFF5D0]" />
+                                    <span className="text-foreground">Reloadable anytime</span>
+                                </li>
+                            </ul>
+                        </div>
+                        {/* </Reveal> */}
                     </div>
                 </div>
 
@@ -43,16 +43,16 @@ export function CardOptions() {
                     <div className="w-[340px] h-[215px] md:w-[480px] md:h-[300px] rounded-3xl relative shadow-2xl overflow-hidden group select-none transition-transform hover:scale-[1.02] duration-500">
 
                         {/* Background - Gradient and simulated grain */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-[#4a4a4a] via-[#2d2d2d] to-[#121212] z-0"></div>
+                        <div className="absolute inset-0 bg-linear-to-br from-[#4a4a4a] via-[#2d2d2d] to-[#121212] z-0"></div>
                         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 z-0 mix-blend-overlay"></div>
 
                         {/* Decorative Gold Arcs */}
                         <div className="absolute -right-20 -top-32 w-80 h-80 md:w-96 md:h-96 rounded-full border border-[#D4AF37]/30 z-0"></div>
-                        <div className="absolute -right-10 -top-40 w-[24rem] h-[24rem] md:w-[30rem] md:h-[30rem] rounded-full border border-[#D4AF37]/20 z-0"></div>
+                        <div className="absolute -right-10 -top-40 w-[24rem] h-96 md:w-120 md:h-120 rounded-full border border-[#D4AF37]/20 z-0"></div>
                         <div className="absolute right-10 bottom-10 w-64 h-64 rounded-full border border-[#D4AF37]/10 z-0"></div>
 
                         {/* Sheen Effect */}
-                        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                        <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/5 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
                         {/* Card Content */}
                         <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-between z-20">

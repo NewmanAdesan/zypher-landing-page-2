@@ -1,5 +1,5 @@
 import { Section } from "@/components/ui/section";
-import { Reveal } from "@/components/ui/reveal";
+// import { Reveal } from "@/components/ui/reveal";
 
 
 export function WhyZypher() {
@@ -10,34 +10,50 @@ export function WhyZypher() {
             <div className="absolute -left-20 bottom-0 w-[500px] h-[500px] bg-foreground/5 rounded-full blur-[100px] -z-10 pointer-events-none" />
 
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <Reveal width="100%">
-                    <h2 className="text-6xl md:text-7xl font-black mb-8 leading-[0.9]">
+                <div className="flex flex-col gap-2 overflow-hidden">
+                    {/* <Reveal width="100%"> */}
+                    <h2 className="text-6xl md:text-7xl font-black mb-4 xl:mb-2 leading-[0.9]">
                         Why <br /> ZYPHER?
                     </h2>
-                </Reveal>
+                    {/* </Reveal> */}
+
+                    {/* <Reveal width="100%"> */}
+                    <div className="relative justify-center hidden xl:flex">
+                        <img
+                            src="/core-features-image.svg"
+                            alt="Zypher Core"
+                            className="max-w-[550px] h-auto object-contain drop-shadow-2xl hover:scale-[1.02] transition-transform duration-700 ml-48"
+                            loading="eager"
+                            width={320}
+                            height={320}
+                        />
+                    </div>
+                    {/* </Reveal> */}
+                </div>
+
 
                 <div className="flex flex-col justify-center space-y-12">
-                    <Reveal delay={0.2} width="100%">
-                        <div className="space-y-4">
-                            <h3 className="text-3xl font-bold text-foreground flex items-center gap-3">
-                                <span className="text-metallic">01.</span> No KYC. No Limits. No Surveillance.
-                            </h3>
-                            <p className="text-xl text-muted-foreground font-light pl-12 border-l border-border">
-                                Use crypto like cash – without identity checks or background verification.
-                            </p>
-                        </div>
-                    </Reveal>
+                    {/* <Reveal delay={0.2} width="100%"> */}
+                    <div className="space-y-4">
+                        <h3 className="text-3xl font-bold text-foreground flex items-center gap-3">
+                            <span className="text-metallic">01.</span> No KYC. No Limits. No Surveillance.
+                        </h3>
+                        <p className="text-xl text-muted-foreground font-light pl-12 border-l border-border">
+                            Use crypto like cash – without identity checks or background verification.
+                        </p>
+                    </div>
+                    {/* </Reveal> */}
 
-                    <Reveal delay={0.4} width="100%">
-                        <div className="space-y-4">
-                            <h3 className="text-3xl font-bold text-foreground flex items-center gap-3">
-                                <span className="text-metallic">02.</span> Global Access. No Nationality Restrictions.
-                            </h3>
-                            <p className="text-xl text-muted-foreground font-light pl-12 border-l border-border">
-                                Available in 160+ countries, accepted at 150M+ merchants and ATMs worldwide.
-                            </p>
-                        </div>
-                    </Reveal>
+                    {/* <Reveal delay={0.4} width="100%"> */}
+                    <div className="space-y-4">
+                        <h3 className="text-3xl font-bold text-foreground flex items-center gap-3">
+                            <span className="text-metallic">02.</span> Global Access. No Nationality Restrictions.
+                        </h3>
+                        <p className="text-xl text-muted-foreground font-light pl-12 border-l border-border">
+                            Available in 160+ countries, accepted at 150M+ merchants and ATMs worldwide.
+                        </p>
+                    </div>
+                    {/* </Reveal> */}
                 </div>
             </div>
         </Section>
