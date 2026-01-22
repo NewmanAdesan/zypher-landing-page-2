@@ -5,6 +5,18 @@ export function Footer() {
         <footer className="bg-card border-t border-border pt-16 pb-8 mt-10">
             <div className="container mx-auto px-4 md:px-8 max-w-7xl">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                    <div className="justify-end">
+                        <img
+                            src="/darkmode-barcode.svg"
+                            alt="Zypher Cards Barcode"
+                            className="w-full max-w-[320px] hidden dark:block"
+                        />
+                        <img
+                            src="/lightmode-barcode.png"
+                            alt="Zypher Cards Barcode"
+                            className="w-full max-w-[320px] block dark:hidden"
+                        />
+                    </div>
                     <div className="col-span-1 md:col-span-1 max-w-[400px] md:self-center">
                         <div className="flex items-center h-8 mb-6">
                             <img
@@ -26,19 +38,6 @@ export function Footer() {
                             Reach our support team at
                         </p>
                         <p className="text-xl xxs:text-2xl xs:text-3xl font-bold text-black -mt-1 dark:text-white">support@zypher.cards</p>
-                    </div>
-
-                    <div className="justify-end">
-                        <img
-                            src="/darkmode-barcode.svg"
-                            alt="Zypher Cards Barcode"
-                            className="w-full max-w-[320px] hidden dark:block"
-                        />
-                        <img
-                            src="/lightmode-barcode.png"
-                            alt="Zypher Cards Barcode"
-                            className="w-full max-w-[320px] block dark:hidden"
-                        />
                     </div>
                 </div>
             </div>
