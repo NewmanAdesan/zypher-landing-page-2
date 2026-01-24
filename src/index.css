@@ -165,4 +165,9 @@
   .shadow-brand-inner {
     box-shadow: inset 41.7199px 24.3366px 48.6732px rgba(43, 46, 61, 0.9), inset -29.0567px 50.8492px 123.491px rgba(255, 255, 255, 0.87);
   }
+
+  .no-overflow-wrap-no-hyphens {
+    overflow-wrap: normal;
+    hyphens: none;
+  }
 }
