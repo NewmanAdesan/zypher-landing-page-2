@@ -6,7 +6,7 @@ const features = [
     { id: "01.", title: "Fully Encrypted Wallet System", desc: "Your funds stay secure 24/7." },
     { id: "02.", title: "Instant Virtual Card Issuance", desc: "Get your card in minutes – use online or offline." },
     { id: "03.", title: "Global USD Accounts", desc: "Spend in USD anywhere Visa or Mastercard is accepted." },
-    { id: "04.", title: "Deposit Options", desc: "Fund your wallet using USDC, TETHER." },
+    { id: "04.", title: "Deposit Options", desc: "Fund your wallet using USDC or USDT." },
     { id: "05.", title: "High Transaction Limits", desc: "No daily/monthly spending limits. Higher limits available upon request." },
     { id: "06.", title: "Mobile Payments Enabled", desc: "Works with Apple Pay & Google Pay." },
     { id: "07.", title: "Transaction Monitoring", desc: "View spending and balances at any time." },
