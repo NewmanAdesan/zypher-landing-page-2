@@ -17,7 +17,7 @@ export function Navbar() {
 
     return (
         <>
-            <nav className="fixed top-0 w-[92%] overflow-hidden xxs:w-[94%] xs2:w-[96%] xs:w-full z-50 bg-background/80 backdrop-blur-md border-b border-border transition-colors duration-300">
+            <nav className="fixed top-0 w-[92%] overflow-hidden xs2:w-[96%] xs:w-full z-50 bg-background/80 backdrop-blur-md border-b border-border transition-colors duration-300">
                 <div className="container mx-auto px-3 sm:px-4 md:px-8 max-w-7xl h-16 flex items-center justify-between">
                     {/* Logo */}
                     <a href="#" className="flex items-center h-8">
