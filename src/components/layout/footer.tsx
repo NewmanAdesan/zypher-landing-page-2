@@ -6,7 +6,7 @@ export function Footer() {
             <div className="container mx-auto px-4 md:px-8 max-w-7xl">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
                     <div className="col-span-1 md:col-span-1 max-w-[400px] md:self-center md:justify-self-end">
-                        <div className="flex items-center h-8 mb-6">
+                        <div className="hidden md:flex items-center h-8 mb-6">
                             <img
                                 src="/Light-Theme-Zypher-Logo.png"
                                 alt="Zypher Logo"
@@ -22,7 +22,7 @@ export function Footer() {
                             The world's most private, secure, and anonymous crypto card platform.
                             Banking without the bank.
                         </p>
-                        <p className="text-muted-foreground text-sm mt-5">
+                        <p className="text-muted-foreground text-sm mt-4">
                             Reach our support team at
                         </p>
                         <p className="text-xl xxs:text-2xl xs:text-3xl font-bold text-black -mt-1 dark:text-white">support@zypher.cards</p>
