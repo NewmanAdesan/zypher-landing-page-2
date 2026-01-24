@@ -45,7 +45,7 @@ export function HowItWorks() {
                             </div>
 
                             <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-metallic transition-colors">{step.title}</h3>
-                            <p className="text-muted-foreground font-light leading-relaxed text-sm">
+                            <p className="text-muted-foreground font-light leading-relaxed text-base" style={{ hyphens: "auto" }}>
                                 {step.desc}
                             </p>
                         </motion.div>
