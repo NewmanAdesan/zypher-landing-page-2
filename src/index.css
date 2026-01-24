@@ -42,6 +42,7 @@
   --radius-sm: calc(var(--radius) - 4px);
 
   --breakpoint-xs: 420px;
+  --breakpoint-xs2: 340px;
   --breakpoint-xxs: 320px;
 
 }
@@ -130,7 +131,7 @@
   h5,
   h6 {
     overflow-wrap: break-word;
-    hyphens: auto;
+    /* hyphens: auto; */
   }
 }
 
