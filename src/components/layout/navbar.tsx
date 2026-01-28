@@ -60,7 +60,7 @@ export function Navbar() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     href="https://app.zypher.cards/login"
-                                >Get Started</a>
+                                >Log in</a>
                             </Button>
                         </div>
                     </div>
@@ -165,7 +165,7 @@ export function Navbar() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 href="https://app.zypher.cards/login"
-                            >Get Started</a>
+                            >Log in</a>
                         </Button>
                     </div>
                 </div>
