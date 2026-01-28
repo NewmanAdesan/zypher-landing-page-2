@@ -48,18 +48,18 @@ export function Navbar() {
                         </div>
                         <div className="flex items-center gap-4">
                             <ThemeToggle />
-                            <Button variant="ghost" size="sm">
+                            {/* <Button variant="ghost" size="sm">
                                 <a
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    href="https://www.zypher.cards/dashboard/cards"
+                                    href="https://app.zypher.cards/login"
                                 >Log in</a>
-                            </Button>
+                            </Button> */}
                             <Button size="sm" className="hover:bg-accent/90 bg-metallic text-[#1a1a1a]">
                                 <a
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    href="https://www.zypher.cards/dashboard/cards"
+                                    href="https://app.zypher.cards/login"
                                 >Get Started</a>
                             </Button>
                         </div>
@@ -102,14 +102,14 @@ export function Navbar() {
                                     <a
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        href="https://www.zypher.cards/dashboard/cards"
+                                        href="https://app.zypher.cards/login"
                                     >Log in</a>
                                 </Button>
                                 <Button className="hover:bg-accent/90 bg-metallic text-[#1a1a1a]">
                                     <a
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        href="https://www.zypher.cards/dashboard/cards"
+                                        href="https://app.zypher.cards/login"
                                     >Get Started</a>
                                 </Button>
                             </div>
@@ -153,18 +153,18 @@ export function Navbar() {
                     ))}
 
                     <div className="flex flex-col gap-3 mt-6">
-                        <Button variant="outline" className="w-full">
+                        {/* <Button variant="outline" className="w-full">
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                href="https://www.zypher.cards/dashboard/cards"
+                                href="https://app.zypher.cards/login"
                             >Log in</a>
-                        </Button>
+                        </Button> */}
                         <Button className="hover:bg-accent/90 bg-metallic text-[#1a1a1a]">
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                href="https://www.zypher.cards/dashboard/cards"
+                                href="https://app.zypher.cards/login"
                             >Get Started</a>
                         </Button>
                     </div>

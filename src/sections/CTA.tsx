@@ -26,7 +26,7 @@ export function CTA() {
                         <motion.a
                             target="_blank"
                             rel="noopener noreferrer"
-                            href="https://www.zypher.cards/dashboard/cards"
+                            href="https://app.zypher.cards/login"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             className="flex items-center w-[97%] h-26 sm:h-20 py-2 sm:py-0 px-12 text-lg sm:text-xl font-bold bg-metallic text-[#1a1a1a] rounded-full shadow-[0_0_40px_-5px_rgba(255,245,208,0.3)]"
@@ -36,6 +36,7 @@ export function CTA() {
                     </div>
                 </Reveal>
             </div>
+
         </Section>
     );
 }

@@ -56,7 +56,7 @@ export function Hero() {
                                 <motion.a
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    href="https://www.zypher.cards/dashboard/cards"
+                                    href="https://app.zypher.cards/login"
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                     className="h-16 px-8 text-lg font-bold bg-metallic text-[#1a1a1a] rounded-lg shadow-[0_0_30px_-5px_rgba(255,245,208,0.3)] flex items-center justify-center gap-2"
