@@ -29,12 +29,12 @@ export function Footer() {
                     </div>
                     <div className="justify-end">
                         <img
-                            src="/darkmode-barcode.svg"
+                            src="/darkmode-barcode.png"
                             alt="Zypher Cards Barcode"
                             className="w-full max-w-[320px] hidden dark:block"
                         />
                         <img
-                            src="/lightmode-barcode.png"
+                            src="/darkmode-barcode.png"
                             alt="Zypher Cards Barcode"
                             className="w-full max-w-[320px] block dark:hidden"
                         />
